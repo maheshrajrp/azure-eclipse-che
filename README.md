@@ -1,6 +1,11 @@
 # About Repository
 Trying to set-up Eclipse Che with Azure Entra
 
+## Sets to setup
+1. Go into infras folder and run `install.sh`
+1. The output will give you a config file. Place it in the KubeConfig Home.
+1. Make sure to populate the Azure Entra values by creating a `.env` file based on `template.env`.
+1. Now start with `presetup.sh` to install Cert managers, etc followed by `install.sh` 
 
 ## Deploying Cert Manager
 helm install cert-manager jetstack/cert-manager \
