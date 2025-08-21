@@ -1,0 +1,21 @@
+spec:
+  networking:
+    domain: $DEPLOYMENT_DOMAIN
+    auth:
+      identityProviderURL: "https://login.microsoftonline.com/$AZURE_TENANT_ID/v2.0"
+      identityToken: access_token
+      oAuthClientName: $AZURE_CLIENT_ID
+      oAuthSecret: $AZURE_CLIENT_SECRET
+      oAuthScope: openid email profile User.Read 6dae42f8-4368-4678-94ff-3960e28e3630/user.read
+      gateway:
+        deployment:
+          containers:
+            - env:
+                - name: OAUTH2_PROXY_INSECURE_OIDC_ALLOW_UNVERIFIED_EMAIL
+                  value: "true"
+              name: oauth-proxy
+  component:
+    cheServer:
+      extraProperties:
+        CHE_OIDC_AUTH__SERVER__URL: "https://login.microsoftonline.com/$AZURE_TENANT_ID/oauth2/v2.0/"
+        CHE_OIDC_EMAIL__CLAIM: unique_name
