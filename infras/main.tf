@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "= 4.39.0"
     }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 3.1.0"
+    }
   }
   required_version = ">= 1.12.0"
 }
@@ -13,7 +17,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "main" {
-  name = "${var.project_name}-rg"
+  name     = "${var.project_name}-rg"
   location = var.azure_region
 }
 

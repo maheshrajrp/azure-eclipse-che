@@ -1,4 +1,5 @@
 # Repo
+.idea
 .env
 che-cluster.yaml
 infras/response.json

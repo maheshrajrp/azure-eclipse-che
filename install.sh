@@ -2,7 +2,7 @@
 
 #Pre-setup, Reading Shells, and etc 
 if [ ! -f .env ]; then
-	echo "Env file not found. This needed to proceed with the installation of Eclipse Che"
+	echo "Env file not found. This is needed to proceed with the installation of Eclipse Che"
 	exit 1
 fi
 
