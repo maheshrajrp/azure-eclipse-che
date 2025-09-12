@@ -1,5 +1,12 @@
 # About Repository
-Trying to set-up Eclipse Che with Azure Entra
+This repository contains Terraform scripts and configuration files for setting up Eclipse Che with Azure Entra ID (formerly Azure AD) authentication integration. 
+
+## Purpose
+This is an experimental project focused on:
+1. Configuring Eclipse Che workspace with Azure Entra ID authentication
+1. Infrastructure provisioning using Terraform for Azure resources
+1. Finding optimal configuration settings for enterprise development environments
+1. Testing authentication flows and user management integration
 
 ## Sets to setup
 1. Go into infras folder and run `install.sh`
